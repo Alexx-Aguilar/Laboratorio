@@ -1,7 +1,7 @@
 const display = document.getElementById("display");
 const buttons = document.querySelectorAll("button");
 
-let currentInput = "";
+let currentInput = ""; // Guarda la expresión actual que ingresa el usuario
 
 
 // Escuchar botones
@@ -25,14 +25,12 @@ buttons.forEach(button => {
 
 
 // Controlar acciones
+// Determina qué operación ejecutar según el valor del botón presionado
 
 function handleInput(value) {
-
-
+    // Selecciona la acción correspondiente al valor del botón
     if (value === "AC") {
-
         clearDisplay();
-
     } 
     
     else if (value === "⌫") {
@@ -56,8 +54,7 @@ function handleInput(value) {
 
 
 
-// Agregar números y operadores
-
+// Agregar números y operadores// Inserta el dígito o símbolo en la entrada actual
 function addValue(value) {
 
     // Evita escribir dos puntos decimales en el mismo número
@@ -106,9 +103,7 @@ function deleteLast() {
 // Realizar cálculo
 
 function calculate() {
-
     try {
-
         const operation = currentInput
             .replaceAll("×", "*")
             .replaceAll("÷", "/")
@@ -137,6 +132,7 @@ function calculate() {
 }
 
 function calculatePercentage() {
+    // Convierte el último número ingresado en porcentaje
     if (currentInput === "") return;
 
     const lastNumberMatch = currentInput.match(/(\d+(?:\.\d+)?)$/);
@@ -210,6 +206,7 @@ document.addEventListener("keydown", (event) => {
 });
 
 function updateClock() {
+    // Actualiza el reloj en pantalla cada segundo
     const clock = document.getElementById("clock");
     const now = new Date();
     clock.textContent = "🕒 " + now.toLocaleTimeString();
