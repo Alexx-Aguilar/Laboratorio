@@ -1,4 +1,7 @@
-/* Estilos principales de la calculadora Neon */
+/* ========================================================================== */
+/* Reset y tipografía básica                                                       */
+/* ========================================================================== */
+
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +9,11 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-    :root {
+/* ========================================================================== */
+/* Variables de tema                                                               */
+/* ========================================================================== */
+
+:root {
     --fondo: radial-gradient(circle at top, rgba(0, 255, 255, 0.12), transparent 20%),
              radial-gradient(circle at bottom right, rgba(255, 0, 255, 0.10), transparent 16%),
              #f5f7ff;
@@ -42,6 +49,7 @@
     --equal-hover-shadow-2: rgba(0, 255, 255, 0.35);
 }
 
+/* Modo oscuro alternativo */
 .modo-oscuro {
     --fondo: radial-gradient(circle at top, rgba(0, 255, 255, 0.16), transparent 20%),
              radial-gradient(circle at bottom right, rgba(255, 0, 255, 0.12), transparent 18%),
@@ -77,6 +85,10 @@
     --equal-hover-shadow-2: rgba(0, 255, 255, 0.35);
 }
 
+/* ========================================================================== */
+/* Layout base                                                                    */
+/* ========================================================================== */
+
 body {
     min-height: 100vh;
     display: flex;
@@ -88,7 +100,9 @@ body {
     cursor: crosshair;
 }
 
-/* Contenedor principal */
+/* ========================================================================== */
+/* Contenedor principal de la calculadora                                           */
+/* ========================================================================== */
 
 .calculator {
     width: 350px;
@@ -109,8 +123,9 @@ body {
         0 0 52px rgba(122, 0, 255, 0.2);
 }
 
-
-/* Título */
+/* ========================================================================== */
+/* Cabecera y reloj                                                                */
+/* ========================================================================== */
 
 .calculator h1 {
     text-align: center;
@@ -119,15 +134,17 @@ body {
     text-shadow: 0 0 10px var(--title-shadow);
 }
 
-#clock{
-    text-align:center;
+#clock {
+    text-align: center;
     color: var(--clock-color);
-    font-size:14px;
-    margin-bottom:15px;
-    letter-spacing:1px;
+    font-size: 14px;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
 }
 
-/* Pantalla */
+/* ========================================================================== */
+/* Display de resultados                                                           */
+/* ========================================================================== */
 
 .display input {
     width: 100%;
@@ -147,28 +164,21 @@ body {
 }
 
 .display input:focus {
-
     border-color: #ff00ff;
-
     box-shadow:
         0 0 20px #ff00ff,
-        inset 0 0 20px rgba(255,0,255,0.4);
-
+        inset 0 0 20px rgba(255, 0, 255, 0.4);
 }
 
-
-/* Botones */
+/* ========================================================================== */
+/* Botonera y estilos generales de botones                                          */
+/* ========================================================================== */
 
 .buttons {
-
     display: grid;
-
     grid-template-columns: repeat(4, 1fr);
-
     gap: 15px;
-
 }
-
 
 button {
     height: 60px;
@@ -203,8 +213,9 @@ button:active {
         inset 0 0 10px rgba(0, 255, 255, 0.2);
 }
 
-
-/* Operadores */
+/* ========================================================================== */
+/* Estilos específicos para operadores                                             */
+/* ========================================================================== */
 
 .operator {
     color: var(--operator-color);
@@ -213,8 +224,9 @@ button:active {
     text-shadow: 0 0 6px var(--operator-text-shadow);
 }
 
-
-/* Igual */
+/* ========================================================================== */
+/* Estilos específicos para el botón igual                                         */
+/* ========================================================================== */
 
 .equal {
     color: #ffffff;
@@ -226,59 +238,42 @@ button:active {
     grid-column: span 2;
 }
 
-
 .equal:hover {
     box-shadow:
         0 0 24px var(--equal-hover-shadow-1),
         0 0 45px var(--equal-hover-shadow-2);
 }
 
-/* Diseño para pantallas pequeñas */
+/* ========================================================================== */
+/* Adaptación para pantallas pequeñas                                               */
+/* ========================================================================== */
 
 @media (max-width: 500px) {
-
     .calculator {
-
         width: 90%;
-
         padding: 20px;
-
     }
-
 
     .calculator h1 {
-
         font-size: 24px;
-
     }
-
 
     .display input {
-
         height: 65px;
-
         font-size: 30px;
-
     }
-
 
     button {
-
         height: 55px;
-
         font-size: 20px;
-
     }
-
 
     .buttons {
-
         gap: 10px;
-
     }
-
 }
 
+/* Estilo de botón de modo oscuro/claro */
 .modo {
     grid-column: span 4;
 }

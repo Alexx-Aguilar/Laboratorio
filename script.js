@@ -31,10 +31,7 @@ function handleInput(value) {
     // Selecciona la acción correspondiente al valor del botón
     if (value === "AC") {
         clearDisplay();
-    } 
-    
-    else if (value === "⌫") {
-
+    } else if (value === "⌫") {
         deleteLast();
 
     } 
@@ -54,7 +51,8 @@ function handleInput(value) {
 
 
 
-// Agregar números y operadores// Inserta el dígito o símbolo en la entrada actual
+// Agregar números y operadores
+// Inserta el dígito o símbolo en la entrada actual
 function addValue(value) {
 
     // Evita escribir dos puntos decimales en el mismo número
@@ -101,7 +99,7 @@ function deleteLast() {
 
 
 // Realizar cálculo
-
+// Evalúa la expresión ingresada y muestra el resultado en el display
 function calculate() {
     try {
         const operation = currentInput
@@ -154,7 +152,7 @@ function calculatePercentage() {
 }
 
 // Soporte para teclado
-
+// Permite ingresar números y operadores desde el teclado físico
 document.addEventListener("keydown", (event) => {
     const key = event.key;
 
@@ -211,6 +209,8 @@ function updateClock() {
     const now = new Date();
     clock.textContent = "🕒 " + now.toLocaleTimeString();
 }
+
+// Inicia el reloj y actualiza cada segundo
 
 setInterval(updateClock, 1000);
 
