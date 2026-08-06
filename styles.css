@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #09001a, #001f3f);
+}
+
+/* Contenedor principal */
+
+.calculator {
+    width: 350px;
+    padding: 25px;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow:
+        0 0 20px #00ffff,
+        0 0 40px #7a00ff;
+}
+
+
+/* Título */
+
+.calculator h1 {
+    text-align: center;
+    color: #00ffff;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #00ffff;
+}
+
+.subtitle {
+
+    color: #b8f8ff;
+
+    text-align: center;
+
+    font-size: 14px;
+
+    margin-top: -10px;
+
+    margin-bottom: 20px;
+
+    letter-spacing: 1px;
+
+}
+
+/* Pantalla */
+
+.display input {
+
+    width: 100%;
+    height: 70px;
+
+    background: #050505;
+    border: 2px solid #00ffff;
+
+    border-radius: 15px;
+
+    color: white;
+    font-size: 35px;
+
+    text-align: right;
+
+    padding: 15px;
+
+    margin-bottom: 20px;
+
+    box-shadow: 0 0 15px #00ffff;
+
+}
+
+
+/* Botones */
+
+.buttons {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 15px;
+
+}
+
+
+button {
+
+    height: 60px;
+
+    border-radius: 15px;
+
+    border: none;
+
+    cursor: pointer;
+
+    font-size: 22px;
+
+    color: white;
+
+    background: #111;
+
+    box-shadow: 0 0 10px #333;
+
+    transition: 0.3s;
+
+}
+
+
+button:hover {
+
+    transform: scale(1.08);
+
+    box-shadow:
+        0 0 15px #00ffff,
+        0 0 30px #7a00ff;
+
+}
+
+
+/* Operadores */
+
+.operator {
+
+    color: #00ffff;
+
+    border: 1px solid #00ffff;
+
+}
+
+
+/* Igual */
+
+.equal {
+
+    background: #7a00ff;
+
+    grid-column: span 2;
+
+}
+
+
+.equal:hover {
+
+    box-shadow:
+    0 0 20px #7a00ff,
+    0 0 40px #ff00ff;
+
+}
+
+/* Diseño para pantallas pequeñas */
+
+@media (max-width: 500px) {
+
+    .calculator {
+
+        width: 90%;
+
+        padding: 20px;
+
+    }
+
+
+    .calculator h1 {
+
+        font-size: 24px;
+
+    }
+
+
+    .display input {
+
+        height: 65px;
+
+        font-size: 30px;
+
+    }
+
+
+    button {
+
+        height: 55px;
+
+        font-size: 20px;
+
+    }
+
+
+    .buttons {
+
+        gap: 10px;
+
+    }
+
+}
+
