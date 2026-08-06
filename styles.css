@@ -5,12 +5,23 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+    :root {
+    --fondo: #ffffff;
+    --texto: #111111;
+}
+
+.modo-oscuro {
+    --fondo: #111111;
+    --texto: #ffffff;
+}
+
 body {
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #09001a, #001f3f);
+    background: var(--fondo);
+    color: var(--texto);
 }
 
 /* Contenedor principal */
@@ -233,4 +244,10 @@ button:hover {
     }
 
 }
+
+.modo {
+    grid-column: span 4;
+}
+
+
 

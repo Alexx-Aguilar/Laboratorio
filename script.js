@@ -219,3 +219,15 @@ function updateClock() {
 setInterval(updateClock, 1000);
 
 updateClock()
+
+const modoBtn = document.getElementById("modoBtn");
+
+modoBtn.addEventListener("click", () => {
+    document.body.classList.toggle("modo-oscuro");
+
+    if (document.body.classList.contains("modo-oscuro")) {
+        modoBtn.textContent = "☀️ Modo claro";
+    } else {
+        modoBtn.textContent = "🌙 Modo oscuro";
+    }
+});
