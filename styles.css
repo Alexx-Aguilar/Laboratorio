@@ -120,6 +120,31 @@ button {
 
 }
 
+button {
+
+    transition: 
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+
+}
+
+
+button:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 0 15px #00ffff,
+        0 0 30px #ff00ff;
+
+}
+
+
+button:active {
+
+    transform: scale(0.95);
+
+}
 
 button:hover {
 
