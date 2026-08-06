@@ -132,6 +132,18 @@ body {
     color: var(--title-color);
     margin-bottom: 20px;
     text-shadow: 0 0 10px var(--title-shadow);
+    animation: glowPulse 3.5s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+    0%, 100% {
+        text-shadow: 0 0 10px var(--title-shadow), 0 0 20px rgba(10, 133, 255, 0.2);
+        transform: translateY(0);
+    }
+    50% {
+        text-shadow: 0 0 16px var(--title-shadow), 0 0 30px rgba(10, 133, 255, 0.22);
+        transform: translateY(-2px);
+    }
 }
 
 #clock {
