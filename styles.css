@@ -35,22 +35,6 @@ body {
     text-shadow: 0 0 10px #00ffff;
 }
 
-.subtitle {
-
-    color: #b8f8ff;
-
-    text-align: center;
-
-    font-size: 14px;
-
-    margin-top: -10px;
-
-    margin-bottom: 20px;
-
-    letter-spacing: 1px;
-
-}
-
 #clock{
     text-align:center;
     color:#00ffff;
@@ -86,6 +70,16 @@ body {
     box-shadow:
         0 0 15px #00ffff,
         inset 0 0 15px rgba(0,255,255,0.4);
+
+}
+
+.display input:focus {
+
+    border-color: #ff00ff;
+
+    box-shadow:
+        0 0 20px #ff00ff,
+        inset 0 0 20px rgba(255,0,255,0.4);
 
 }
 
