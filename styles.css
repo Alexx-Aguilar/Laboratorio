@@ -22,6 +22,7 @@ body {
     align-items: center;
     background: var(--fondo);
     color: var(--texto);
+    cursor: crosshair;
 }
 
 /* Contenedor principal */
