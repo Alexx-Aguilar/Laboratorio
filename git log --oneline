@@ -1,0 +1,30 @@
+[33m1b04e84[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mfeature/documentacion[m[33m, [m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m docs: agregar tecnologías utilizadas al README
+[33me163969[m docs: agregar información de la versión
+[33m34e654d[m docs: documentar estructura del archivo HTML
+[33m65c6804[m style: mejorar botón de cambio de tema
+[33mc7d3d72[m style: agregar transición al reloj
+[33mae9aa74[m style: agregar animación al título
+[33m70411d1[m style: mejorar diseño del reloj
+[33ma580b71[m feat: mejorar accesibilidad de los botones
+[33m85e16b1[m refactor: organizar estilos por secciones
+[33m2b79a21[m docs: documentar funciones principales del script
+[33m0dcaad3[m modificar el modo oscuro y claro
+[33mfe8bf11[m style: actualizar colores de los botones
+[33m95a6709[m index modificado
+[33mf8d8089[m style: mejorar diseño general de la calculadora
+[33ma2e9474[m cambio de cursor
+[33ma55f597[m style: agregar animación al contenedor
+[33m6da5184[m docs: actualizar título de la aplicación
+[33m10c8232[m style: mejorar visualización del reloj
+[33mf1821c2[m style: mejorar efecto hover de botones
+[33m8fdf109[m style: actualizar diseño del botón igual
+[33mbcfb5ed[m Corrección del modo oscuro y modo claro de la calculadora
+[33m61168c4[m style: mejorar espacio entre pantalla y botones
+[33me6cba00[m feat: agregar sonido al presionar botones
+[33mc93bda1[m style: mejorar pantalla de resultados neon
+[33m4d52548[m style: mejorar animaciones de botones
+[33m4cf1095[m feat: agregar reloj en tiempo real
+[33mda082a3[m feat: agregar subtitulo a la calculadora
+[33m991f5ca[m feat: crear estructura HTML de la calculadora
+[33mc49e3cf[m comienzo de calculadora
+[33m5db95b5[m first commit
