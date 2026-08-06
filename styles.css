@@ -51,6 +51,14 @@ body {
 
 }
 
+#clock{
+    text-align:center;
+    color:#00ffff;
+    font-size:14px;
+    margin-bottom:15px;
+    letter-spacing:1px;
+}
+
 /* Pantalla */
 
 .display input {
