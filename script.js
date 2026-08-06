@@ -48,17 +48,10 @@ function handleInput(value) {
     } 
     
     else if (value === "%") {
-
-    calculatePercentage();
-
+        calculatePercentage();
+    } else {
+        addValue(value);
     }
-
-    else {
-
-    addValue(value);
-
-    }
-
 }
 
 
@@ -144,76 +137,82 @@ function calculate() {
 }
 
 function calculatePercentage() {
-
     if (currentInput === "") return;
 
-    try {
-
-        const result = parseFloat(currentInput) / 100;
-
-        display.value = result;
-
-        currentInput = result.toString();
-
-    } catch {
-
-        display.value = "Error";
-
-        currentInput = "";
-
+    const lastNumberMatch = currentInput.match(/(\d+(?:\.\d+)?)$/);
+    if (lastNumberMatch) {
+        const percentageValue = parseFloat(lastNumberMatch[0]) / 100;
+        currentInput = currentInput.slice(0, -lastNumberMatch[0].length) + percentageValue;
+        display.value = currentInput;
+        return;
     }
 
+    try {
+        const result = parseFloat(currentInput) / 100;
+        display.value = result;
+        currentInput = result.toString();
+    } catch {
+        display.value = "Error";
+        currentInput = "";
+    }
 }
 
 // Soporte para teclado
 
 document.addEventListener("keydown", (event) => {
-
     const key = event.key;
 
     if (!isNaN(key) || key === ".") {
         addValue(key);
+        return;
     }
 
-    else if (key === "+") {
+    if (key === "+") {
         addValue("+");
+        return;
     }
 
-    else if (key === "-") {
+    if (key === "-") {
         addValue("−");
+        return;
     }
 
-    else if (key === "*") {
+    if (key === "*") {
         addValue("×");
+        return;
     }
 
-    else if (key === "/") {
+    if (key === "/") {
         event.preventDefault();
         addValue("÷");
+        return;
     }
 
-    else if (key === "Enter") {
+    if (key === "%") {
+        handleInput("%");
+        return;
+    }
+
+    if (key === "Enter") {
+        event.preventDefault();
         calculate();
+        return;
     }
 
-    else if (key === "Backspace") {
+    if (key === "Backspace") {
         deleteLast();
+        return;
     }
 
-    else if (key === "Escape") {
+    if (key === "Escape") {
         clearDisplay();
     }
-
 });
 
 function updateClock() {
-
     const clock = document.getElementById("clock");
-
     const now = new Date();
-
-    clock.textContent = now.toLocaleTimeString();
-
+    clock.textContent = "🕒 " + now.toLocaleTimeString();
 }
 
 setInterval(updateClock, 1000);
