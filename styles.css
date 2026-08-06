@@ -34,6 +34,11 @@ body {
     box-shadow:
         0 0 20px #00ffff,
         0 0 40px #7a00ff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.calculator:hover {
+    transform: translateY(-8px);
 }
 
 
