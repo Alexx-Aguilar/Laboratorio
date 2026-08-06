@@ -114,59 +114,64 @@ body {
 button {
     height: 60px;
     border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(0, 255, 255, 0.2);
     cursor: pointer;
     font-size: 22px;
-    color: white;
-    background: linear-gradient(145deg, #11131a, #121624);
-    box-shadow: 0 0 12px rgba(0, 0, 0, 0.35);
+    color: #f7f7ff;
+    background: linear-gradient(180deg, #10141f 0%, #0b0f1a 100%);
+    box-shadow:
+        inset 0 0 8px rgba(0, 255, 255, 0.08),
+        0 0 10px rgba(0, 255, 255, 0.08);
     transition:
         transform 0.2s ease,
         box-shadow 0.2s ease,
-        background 0.3s ease;
+        background 0.3s ease,
+        border-color 0.3s ease;
 }
 
 button:hover {
     transform: scale(1.08) translateY(-2px);
     box-shadow:
         0 0 18px rgba(0, 255, 255, 0.35),
-        0 0 36px rgba(255, 0, 255, 0.18);
-    background: linear-gradient(145deg, #151825, #1c1f36);
+        0 0 40px rgba(255, 0, 255, 0.22);
+    background: linear-gradient(180deg, #111827 0%, #09101d 100%);
+    border-color: rgba(0, 255, 255, 0.45);
 }
 
 button:active {
     transform: scale(0.95);
+    box-shadow:
+        inset 0 0 10px rgba(0, 255, 255, 0.2);
 }
 
 
 /* Operadores */
 
 .operator {
-
-    color: #00ffff;
-
-    border: 1px solid #00ffff;
-
+    color: #72f3ff;
+    background: rgba(0, 255, 255, 0.08);
+    border: 1px solid rgba(114, 243, 255, 0.35);
+    text-shadow: 0 0 6px rgba(114, 243, 255, 0.45);
 }
 
 
 /* Igual */
 
 .equal {
-
-    background: linear-gradient(45deg, #ff00ff, #00ffff);
-
+    color: #ffffff;
+    background: linear-gradient(135deg, rgba(255, 0, 255, 0.95), rgba(0, 255, 255, 0.95));
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow:
+        0 0 18px rgba(255, 0, 255, 0.45),
+        0 0 28px rgba(0, 255, 255, 0.25);
     grid-column: span 2;
-
 }
 
 
 .equal:hover {
-
     box-shadow:
-    0 0 20px #7a00ff,
-    0 0 40px #ff00ff;
-
+        0 0 24px rgba(255, 0, 255, 0.55),
+        0 0 45px rgba(0, 255, 255, 0.35);
 }
 
 /* Diseño para pantallas pequeñas */
