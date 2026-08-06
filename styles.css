@@ -163,8 +163,8 @@ button:hover {
     transform: scale(1.08);
 
     box-shadow:
-        0 0 15px #00ffff,
-        0 0 30px #7a00ff;
+        0 0 15px hsl(182, 81%, 49%),
+        0 0 30px #8603a7;
 
 }
 
